@@ -2,4 +2,8 @@
     <string name="app_name">randomuser</string>
     <string name="title_user_detail">User Detail</string>
     <string name="error_state_cta_try_again">Try again</string>
+
+    <string name="network_error_user_message">Please check your internet connection and try again</string>
+    <string name="unknown_error_user_message">Hmm. Something didn\'t work as expected. Plesae try again in a bit</string>
+
 </resources>

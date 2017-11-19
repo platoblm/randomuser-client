@@ -1,0 +1,84 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "mrs",
+        "first": "ivanice",
+        "last": "rezende"
+      },
+      "location": {
+        "street": "4012 rua são josé",
+        "city": "bragança paulista",
+        "state": "bahia",
+        "postcode": 99541
+      },
+      "email": "ivanice.rezende@example.com",
+      "login": {
+        "username": "greenwolf206",
+        "password": "playboy2",
+        "salt": "ezDZxgAs",
+        "md5": "1239622c86a1226acff643550970b2fc",
+        "sha1": "b65a3dffd563171926395f874a5380527a3b186a",
+        "sha256": "a3a31826335a4e78428b65e1c5cae27cdd493daddc202aca5087c52f1bc123be"
+      },
+      "dob": "1949-07-22 03:15:55",
+      "registered": "2005-11-08 18:04:57",
+      "phone": "(86) 6013-2643",
+      "cell": "(42) 9188-6339",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/84.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/84.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/84.jpg"
+      },
+      "nat": "BR"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "mr",
+        "first": "ceyhun",
+        "last": "erbay"
+      },
+      "location": {
+        "street": "4223 abanoz sk",
+        "city": "erzincan",
+        "state": "sakarya",
+        "postcode": 34045
+      },
+      "email": "ceyhun.erbay@example.com",
+      "login": {
+        "username": "beautifulrabbit963",
+        "password": "redred",
+        "salt": "V4y2KZ2k",
+        "md5": "f5265e336bf12e1d71c46c0163ce57c2",
+        "sha1": "fb21a844abd092a8ff19d103c43a34b3ab72117e",
+        "sha256": "17d45546b437cb4d65a19d6f4ac51ff51654b06dda5b2cf552d4248fc53f2214"
+      },
+      "dob": "1949-08-08 16:00:10",
+      "registered": "2003-10-16 16:31:34",
+      "phone": "(731)-866-6989",
+      "cell": "(888)-889-1122",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/46.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/46.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/46.jpg"
+      },
+      "nat": "TR"
+    }
+  ],
+  "info": {
+    "seed": "c24a11a1d4d308e0",
+    "results": 2,
+    "page": 1,
+    "version": "1.1"
+  }
+}
