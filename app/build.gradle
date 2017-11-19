@@ -1,0 +1,68 @@
+buildscript {
+    ext.dagger_version = '2.12'
+    ext.support_version = '27.0.0'
+    ext.android_arch_version = '1.0.0'
+    ext.butterknife_version = '8.4.0'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    compileSdkVersion 27
+    buildToolsVersion "27.0.1"
+
+    defaultConfig {
+        applicationId "com.example.randomuser"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+}
+
+dependencies {
+
+    implementation "com.android.support:appcompat-v7:$support_version",
+            "com.android.support:support-v4:$support_version",
+            "com.android.support:recyclerview-v7:$support_version",
+            "android.arch.lifecycle:common-java8:$android_arch_version",
+            "android.arch.lifecycle:extensions:$android_arch_version",
+            "android.arch.lifecycle:reactivestreams:$android_arch_version",
+            "com.jakewharton:butterknife:$butterknife_version",
+            "com.google.dagger:dagger:$dagger_version",
+            "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+            'com.squareup.picasso:picasso:2.5.2',
+            'com.google.code.gson:gson:2.8.2',
+            "io.reactivex.rxjava2:rxjava:2.1.0",
+            "io.reactivex.rxjava2:rxandroid:2.0.1",
+            'com.annimon:stream:1.1.9',
+            'com.squareup.retrofit2:retrofit:2.3.0'
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
+
+    testImplementation "junit:junit:4.12",
+            "org.mockito:mockito-core:2.7.22",
+            "org.assertj:assertj-core:3.6.2"
+
+    androidTestImplementation "com.android.support.test:runner:1.0.1",
+            "com.android.support.test.espresso:espresso-core:3.0.1"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">randomuser</string>
+    <string name="title_user_detail">User Detail</string>
+    <string name="error_state_cta_try_again">Try again</string>
+</resources>
