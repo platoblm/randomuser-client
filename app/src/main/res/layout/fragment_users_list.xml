@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list"
@@ -13,7 +14,7 @@
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
 
     <LinearLayout
-        android:id="@+id/error_state"
+        android:id="@+id/error_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
@@ -31,8 +32,8 @@
             android:id="@+id/error_try_again"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/error_state_cta_try_again"
-            android:layout_marginTop="@dimen/margin_medium"/>
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/error_state_cta_try_again"/>
 
     </LinearLayout>
 

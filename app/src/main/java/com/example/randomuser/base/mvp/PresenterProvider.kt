@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import javax.inject.Provider
 
+// persists presenters across configuration changes with the help of ViewModelProvider
 class PresenterProvider {
 
     fun <T> getPresenter(provider  : Provider<T>, activity : FragmentActivity) : T =
@@ -17,13 +18,13 @@ class PresenterProvider {
 
     @Suppress("UNCHECKED_CAST")
     private fun <T> getPresenter(provider  : Provider<T>,
-                                 viewModelProviderGetter: (ViewModelProvider.Factory) -> ViewModelProvider) : T {
+                                 viewModelProviderMaker: (ViewModelProvider.Factory) -> ViewModelProvider) : T {
 
         val providerAsFactory = object : ViewModelProvider.Factory {
             override fun <P : ViewModel> create(ignore: Class<P>) = provider.get() as P
         }
 
-        return viewModelProviderGetter
+        return viewModelProviderMaker
                 .invoke(providerAsFactory)
                 .get(ViewModel::class.java) as T
     }

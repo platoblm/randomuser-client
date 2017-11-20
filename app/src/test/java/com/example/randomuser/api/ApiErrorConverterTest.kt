@@ -14,21 +14,17 @@ import java.io.IOException
 
 class ApiErrorConverterTest {
 
-    @Rule
-    @JvmField
-    val mockito = MockitoJUnit.rule()
+    @Rule @JvmField val mockito = MockitoJUnit.rule()
 
     @Mock lateinit var resources: ResourcesHelper
 
     lateinit var converter: ApiErrorConverter
 
-    @Before
-    fun setup() {
+    @Before fun setup() {
         converter = ApiErrorConverter(resources)
     }
 
-    @Test
-    fun shouldConvertNetworkError() {
+    @Test fun shouldConvertNetworkError() {
         mockString(R.string.network_error_user_message, "network")
         val thrown = IOException()
 
@@ -38,8 +34,7 @@ class ApiErrorConverterTest {
         result.assertError(DisplayError("network", thrown))
     }
 
-    @Test
-    fun shouldShowDefaultMessageIfErrorUnknown() {
+    @Test fun shouldShowDefaultMessageIfErrorUnknown() {
         mockString(R.string.unknown_error_user_message, "unknown")
         val thrown = RuntimeException()
 

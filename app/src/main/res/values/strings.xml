@@ -4,6 +4,10 @@
     <string name="error_state_cta_try_again">Try again</string>
 
     <string name="network_error_user_message">Please check your internet connection and try again</string>
-    <string name="unknown_error_user_message">Hmm. Something didn\'t work as expected. Plesae try again in a bit</string>
+    <string name="unknown_error_user_message">Hmm. Something didn\'t work as expected. Try again in a bit</string>
 
+    <string name="details_no_user_selected_message">Select a user to see more about them</string>
+
+    <string name="title_list">Users</string>
+    <string name="title_details">Details</string>
 </resources>

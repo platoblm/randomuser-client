@@ -7,6 +7,5 @@ import javax.inject.Inject
 
 class ResourcesHelper @Inject constructor(private val app: Application) {
 
-
     fun string(@StringRes resourceId: Int) = app.getString(resourceId)
 }

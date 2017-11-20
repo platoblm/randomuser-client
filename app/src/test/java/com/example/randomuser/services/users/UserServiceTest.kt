@@ -5,7 +5,7 @@ import com.example.randomuser.api.ApiErrorConverter
 import com.example.randomuser.api.ApiProvider
 import com.example.randomuser.api.responses.ApiUsersResponse
 import com.example.randomuser.models.DisplayError
-import com.example.randomuser.testing.ResourcesHelper.parseJsonResourceAs
+import com.example.randomuser.testing.TestingResources.parseJsonResourceAs
 import com.example.randomuser.testing.fixtures.UserFixtures.usersForSuccessfulApiResponse
 import com.example.randomuser.testing.whenever
 import io.reactivex.Single
@@ -47,7 +47,7 @@ class UserServiceTest {
         val thrown = Throwable()
         val expected = DisplayError("error", thrown)
         makeApiReturn(error(thrown))
-        makeErrorConverterReturn(expected, `for`= thrown)
+        makeErrorConverterReturn(expected, whenError = thrown)
 
         val observer = service.listUsers().test()
 
@@ -57,6 +57,6 @@ class UserServiceTest {
     private fun makeApiReturn(response: Single<ApiUsersResponse>) =
             whenever(api.listUsers()).thenReturn(response)
 
-    private fun makeErrorConverterReturn(result : Throwable, `for`: Throwable) =
-            whenever(errorConverter.convert<String>(`for`)).thenReturn(error(result))
+    private fun makeErrorConverterReturn(result: Throwable, whenError: Throwable) =
+            whenever(errorConverter.convert<String>(whenError)).thenReturn(error(result))
 }

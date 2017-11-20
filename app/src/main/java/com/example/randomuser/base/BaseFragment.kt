@@ -34,6 +34,5 @@ abstract class BaseFragment<P : Presenter> : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View =
             inflater.inflate(layout(), container, false)
 
-    private fun getActivityComponent() = (activity as ActivityComponentProvider)
-            .activityComponent()
+    private fun getActivityComponent() = (activity as ActivityComponentProvider).activityComponent()
 }

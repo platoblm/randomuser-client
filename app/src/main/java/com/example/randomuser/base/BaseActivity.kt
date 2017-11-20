@@ -16,5 +16,4 @@ abstract class BaseActivity : AppCompatActivity(), ActivityComponentProvider {
     }
 
     override fun activityComponent() = activityComponent
-
 }

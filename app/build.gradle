@@ -43,6 +43,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$support_version",
             "com.android.support:support-v4:$support_version",
             "com.android.support:recyclerview-v7:$support_version",
+            'com.android.support.constraint:constraint-layout:1.1.0-beta3',
             "android.arch.lifecycle:common-java8:$android_arch_version",
             "android.arch.lifecycle:extensions:$android_arch_version",
             "android.arch.lifecycle:reactivestreams:$android_arch_version",
@@ -52,18 +53,21 @@ dependencies {
             'com.google.code.gson:gson:2.8.2',
             "io.reactivex.rxjava2:rxjava:2.1.0",
             "io.reactivex.rxjava2:rxandroid:2.0.1",
-            'com.annimon:stream:1.1.9',
             "com.squareup.retrofit2:retrofit:$retrofit_version",
             "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version",
             "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
-
     testImplementation "junit:junit:4.12",
             "org.mockito:mockito-core:2.7.22",
-            "org.assertj:assertj-core:3.6.2"
+            "org.assertj:assertj-core:3.6.2",
+            "android.arch.core:core-testing:$android_arch_version"
 
     androidTestImplementation "com.android.support.test:runner:1.0.1",
             "com.android.support.test.espresso:espresso-core:3.0.1"
+}
+
+androidExtensions {
+    experimental = true
 }

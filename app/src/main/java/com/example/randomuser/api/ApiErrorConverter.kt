@@ -7,6 +7,7 @@ import io.reactivex.Single
 import java.io.IOException
 import javax.inject.Inject
 
+//TODO if the error is an HttpException check to see if there's a server error response. see https://randomuser.me/documentation#errors
 
 class ApiErrorConverter @Inject constructor(private val resources : ResourcesHelper) {
 
@@ -15,7 +16,6 @@ class ApiErrorConverter @Inject constructor(private val resources : ResourcesHel
         return Single.error(DisplayError(message, throwable))
     }
 
-    //TODO if the error is an HttpException check to see if there's a server error response. see https://randomuser.me/documentation#errors
     private fun messageFrom(throwable: Throwable) : String {
         return when(throwable) {
             is IOException -> resources.string(R.string.network_error_user_message)

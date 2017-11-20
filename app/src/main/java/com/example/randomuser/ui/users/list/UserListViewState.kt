@@ -1,8 +1,8 @@
 package com.example.randomuser.ui.users.list
 
 
-data class UserListViewState(val showLoading : Boolean,
-                             val showErrorState : Boolean,
-                             val showList : Boolean,
-                             val errorMessage : String?,
-                             val items : List<String>)
+data class UserListViewState(val showLoading : Boolean = false,
+                             val showError: Boolean = false,
+                             val showItems: Boolean = false,
+                             val errorMessage : String? = null,
+                             val items : List<UserListItem> = emptyList())
