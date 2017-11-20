@@ -5,6 +5,6 @@ import io.reactivex.SingleTransformer
 
 class TestSchedulers : SchedulersTransformer {
 
-    // override and don't do anything in tests
+    // don't do anything in tests
     override fun <T> forSingle() = SingleTransformer<T, T> { it }
 }

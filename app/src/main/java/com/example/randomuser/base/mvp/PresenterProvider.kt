@@ -7,7 +7,10 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import javax.inject.Provider
 
-// persists presenters across configuration changes with the help of ViewModelProvider
+/**
+ * Delegates presenter creation to the ViewModelProvider of the activity/fragment.
+ * The presenters are preserved across configuration changes as view models do.
+ */
 class PresenterProvider {
 
     fun <T> getPresenter(provider  : Provider<T>, activity : FragmentActivity) : T =

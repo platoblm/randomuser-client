@@ -6,7 +6,6 @@ import com.example.randomuser.base.images.ImageLoader
 import com.example.randomuser.ui.users.list.UserListItem
 import javax.inject.Inject
 
-
 class UserListAdapter @Inject constructor(private val imageLoader: ImageLoader) : RecyclerView.Adapter<UserListItemViewHolder>() {
 
     private var items = emptyList<UserListItem>()

@@ -5,8 +5,7 @@ import android.widget.ImageView
 import com.squareup.picasso.Picasso
 import javax.inject.Inject
 
-
-class ImageLoaderAndroid @Inject constructor(app : Application) : ImageLoader {
+class ImageLoaderWithPicasso @Inject constructor(app : Application) : ImageLoader {
 
     private val picasso = Picasso.with(app)
 

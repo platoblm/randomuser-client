@@ -6,7 +6,7 @@ import com.example.randomuser.api.ApiProvider
 import com.example.randomuser.api.responses.ApiUsersResponse
 import com.example.randomuser.models.DisplayError
 import com.example.randomuser.testing.TestingResources.parseJsonResourceAs
-import com.example.randomuser.testing.fixtures.UserFixtures.usersForSuccessfulApiResponse
+import com.example.randomuser.testing.fixtures.UserFixtures
 import com.example.randomuser.testing.whenever
 import io.reactivex.Single
 import io.reactivex.Single.error
@@ -34,7 +34,7 @@ class UserServiceTest {
     }
 
     @Test fun shouldDeserializeSuccessfulResponse() {
-        val expected = usersForSuccessfulApiResponse()
+        val expected = UserFixtures.usersForSuccessfulApiResponse()
         val response = parseJsonResourceAs("responses/users_success.json", ApiUsersResponse::class.java)
         makeApiReturn(just(response))
 

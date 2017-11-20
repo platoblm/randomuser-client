@@ -5,7 +5,6 @@ import com.example.randomuser.models.Location
 import com.example.randomuser.models.User
 import com.example.randomuser.models.UserName
 
-
 object UserFixtures {
 
     fun createUser() = User(email = "ivanice.rezende@example.com",

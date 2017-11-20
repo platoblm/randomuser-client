@@ -63,9 +63,6 @@ dependencies {
             "org.mockito:mockito-core:2.7.22",
             "org.assertj:assertj-core:3.6.2",
             "android.arch.core:core-testing:$android_arch_version"
-
-    androidTestImplementation "com.android.support.test:runner:1.0.1",
-            "com.android.support.test.espresso:espresso-core:3.0.1"
 }
 
 androidExtensions {
